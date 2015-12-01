@@ -144,6 +144,10 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+	// per aggiungere le flag
+		Laracasts\Flash\FlashServiceProvider::class,
+	// per gestire meglio le form	
+    	Collective\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -176,6 +180,7 @@ return [
         'Gate'      => Illuminate\Support\Facades\Gate::class,
         'Hash'      => Illuminate\Support\Facades\Hash::class,
         'Input'     => Illuminate\Support\Facades\Input::class,
+        'Inspiring' => Illuminate\Foundation\Inspiring::class,
         'Lang'      => Illuminate\Support\Facades\Lang::class,
         'Log'       => Illuminate\Support\Facades\Log::class,
         'Mail'      => Illuminate\Support\Facades\Mail::class,
@@ -192,6 +197,10 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+		// aggiunti da leonardo
+    	'Flash'		=> Laracasts\Flash\Flash::class,
+		'Form'		=> Collective\Html\FormFacade::class,
+		'Html' 		=> Collective\Html\HtmlFacade::class,
 
     ],
 

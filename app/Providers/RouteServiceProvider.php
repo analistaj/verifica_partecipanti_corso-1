@@ -27,6 +27,14 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot($router);
+
+        //versione semplice
+        //$router->model('users', \App\User::class);
+        
+        //funziona sempre e anche per fare filtri su campi diversi da id
+        $router->bind('students', function($id) {
+        	return \App\Student::where('id', $id)->firstOrFail();
+        });
     }
 
     /**
