@@ -27,7 +27,7 @@ class StudentRequest extends Request
         return [
 			'name' => ['required', 'max:255'],
             'email' => ['required', 'email', 'unique:students' . ($this->method() == 'POST' ? '' : (',email,' . $this->route('students')->id))],
-			
+			'telephone' => ['required', 'unique:students'],
         ];
     }
 }

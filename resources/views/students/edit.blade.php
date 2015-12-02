@@ -1,14 +1,14 @@
 @extends('app')
 
 @section('title')
-Edit user
+Modifica 
 @stop
 
 @section('content')
-<h1>Edit user </h1>
+<h1>Modifica</h1>
 <hr />
-{!! Form::model($article, ['method' => 'PATCH', 'action' => ['UsersController@update', $article->id]]) !!}
-	@include('users.form', ['submitButtonText' => 'Update', 'create' => false])
+{!! Form::model($student, ['method' => 'PATCH', 'action' => ['StudentsController@update', $student->id]]) !!}
+	@include('students.form', ['submitButtonText' => 'Update', 'create' => false])
 {!! Form::close() !!}
 
 @include('errors.list')

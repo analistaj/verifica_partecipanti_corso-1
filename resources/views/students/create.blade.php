@@ -1,14 +1,14 @@
 @extends('app')
 
 @section('title')
-New Article
+Nuovo partecipante
 @stop
 
 @section('content')
-<h1>new article</h1>
+<h1>Nuovo Partecipante</h1>
 <hr />
-{!! Form::model($Article = new \App\Article, array('action' => 'Articles_Controller@index')) !!}
-	@include('article.form', ['submitButtonText' => 'Save', 'create' => true])
+{!! Form::model($student = new \App\Student, array('action' => 'StudentsController@index')) !!}
+	@include('students.form', ['submitButtonText' => 'Save', 'create' => true])
 {!! Form::close() !!}
 
 @include('errors.list')
